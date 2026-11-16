@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almeidafly | Defense-oriented software engineering</title>
+<meta name="description" content="Almeidafly builds open tooling for software supply-chain assurance, CI hardening, space and telemetry systems, and autonomous systems.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#">ALMEIDAFLY</a>
+    <nav>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#work">Public work</a>
+      <a href="#statement">Capability statement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Defense-oriented software engineering</p>
+    <h1>Software for systems that have to keep working.</h1>
+    <p class="lead">Almeidafly builds open tooling that makes software supply chains verifiable, CI pipelines honest, and telemetry and autonomous systems easier to trust. Every claim on this page links to public work you can inspect.</p>
+  </div>
+</section>
+
+<section id="mission" class="wrap">
+  <h2>Mission</h2>
+  <p>Make mission software provably buildable and tamper-evident, from the dependency tree to the test run, and publish the work in the open so anyone can check it.</p>
+</section>
+
+<section id="capabilities" class="wrap">
+  <h2>Capability areas</h2>
+  <div class="grid">
+    <div class="card"><h3>Software supply-chain assurance</h3><p>Dependency risk tracking, controlled delivery of patched dependencies, and detection of default settings that change silently between versions.</p></div>
+    <div class="card"><h3>CI hardening</h3><p>Least-privilege GitHub Actions, security scanning, merge-result testing, and detection of faked or weakened tests.</p></div>
+    <div class="card"><h3>Space and telemetry tooling</h3><p>Reproducible pipelines for public mission data, thermal modeling, and load-aware compute throttling.</p></div>
+    <div class="card"><h3>Autonomous systems</h3><p>Approval-gated robot control loops with allowlists and kill switches, plus mobile sensor logging.</p></div>
+  </div>
+</section>
+
+<section id="work" class="wrap">
+  <h2>Selected public work</h2>
+  <p class="note">Open-source pull requests submitted to public repositories. Status is as of November 2026. These are community contributions, not contracts, and do not imply endorsement by the repository owners.</p>
+  <table>
+    <thead><tr><th>Organization</th><th>Contribution</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>NASA</td><td><a href="https://github.com/nasa/api-docs/pull/267">nasa/api-docs#267</a>: fix release tracker on multi-line commit messages</td><td>Open</td></tr>
+      <tr><td>NASA</td><td><a href="https://github.com/nasa/vira/pull/7">nasa/vira#7</a>: fix stb FetchContent with a pinned commit</td><td>Open</td></tr>
+      <tr><td>NASA</td><td><a href="https://github.com/nasa/meza/pull/77">nasa/meza#77</a>: fix SBOM workflow schedule and script path</td><td>Open</td></tr>
+      <tr><td>NASA</td><td><a href="https://github.com/nasa/hermes/pull/317">nasa/hermes#317</a> and <a href="https://github.com/nasa/hermes/pull/318">#318</a>: F Prime cache image and string-length-prefix fixes</td><td>Open</td></tr>
+      <tr><td>NASA</td><td>GitHub Actions security hardening: <a href="https://github.com/nasa/bplib/pull/268">bplib#268</a>, <a href="https://github.com/nasa/ncompare/pull/377">ncompare#377</a>, <a href="https://github.com/nasa/vira/pull/8">vira#8</a>, <a href="https://github.com/nasa/api-docs/pull/268">api-docs#268</a>, <a href="https://github.com/nasa/meza/pull/78">meza#78</a></td><td>Open</td></tr>
+      <tr><td>NSA</td><td><a href="https://github.com/NationalSecurityAgency/seabee/pull/64">NationalSecurityAgency/seabee#64</a>: fix container kernel-devel install in CI</td><td>Open</td></tr>
+      <tr><td>NVIDIA</td><td><a href="https://github.com/NVIDIA/OpenShell/pull/5625">NVIDIA/OpenShell#5625</a>: queue SQLite writers in-process to avoid "database is locked"</td><td>Open</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Tooling we maintain</h3>
+  <div class="grid">
+    <div class="card"><h4>Supply chain and CI</h4><ul>
+      <li><a href="https://github.com/fitzyracing1/patch-cloud">patch-cloud</a>: opt-in npm registry that serves a fixed fork while upstream CI is failing</li>
+      <li><a href="https://github.com/fitzyracing1/lit-dark">lit-dark</a>: reproducible lit/dark CI status standard</li>
+      <li><a href="https://github.com/fitzyracing1/fakegreen">fakegreen</a>: detects skipped, deleted, or weakened tests in agent-written diffs</li>
+      <li><a href="https://github.com/fitzyracing1/merge-guard">merge-guard</a>: tests the merged result of every PR and blocks merges that would break CI</li>
+      <li><a href="https://github.com/fitzyracing1/knobs">knobs</a>: tracks default parameters that change silently between versions</li>
+    </ul></div>
+    <div class="card"><h4>Space and telemetry</h4><ul>
+      <li><a href="https://github.com/fitzyracing1/marslog">marslog</a>: daily cache and per-sol changelog of public NASA Mars rover data, with a Curiosity air-temperature model</li>
+      <li><a href="https://github.com/fitzyracing1/heatgate">heatgate</a>: pauses heavy compute when the machine runs hot</li>
+      <li>Concept in progress: combining the two so rover-class compute can throttle ahead of forecast thermal limits</li>
+    </ul></div>
+    <div class="card"><h4>Autonomous systems</h4><ul>
+      <li><a href="https://github.com/Almeidafly/x-robot">x-robot</a>: approval-gated browser robot with a localhost allowlist and a STOP kill switch</li>
+      <li><a href="https://github.com/fitzyracing1/phone-robot">phone-robot</a>: Android GPS, activity, and motion logging to a self-hosted server</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="statement" class="wrap statement">
+  <h2>Capability statement</h2>
+  <div class="grid two">
+    <div>
+      <h3>Company data</h3>
+      <dl>
+        <dt>Legal structure</dt><dd>Sole proprietorship</dd>
+        <dt>Principal</dt><dd>Joshua Almeida, founder</dd>
+        <dt>Location</dt><dd>New Bedford, Massachusetts, USA</dd>
+        <dt>SAM.gov UEI / CAGE</dt><dd>Registration in progress</dd>
+        <dt>NAICS codes (proposed)</dt><dd>541511 Custom Computer Programming Services<br>541512 Computer Systems Design Services<br>541715 R&amp;D in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)</dd>
+      </dl>
+    </div>
+    <div>
+      <h3>Core competencies</h3>
+      <ul>
+        <li>CI/CD pipeline hardening and least-privilege GitHub Actions</li>
+        <li>Software supply-chain integrity: dependency patching, provenance, and change tracking</li>
+        <li>Test-integrity verification for human- and AI-written code</li>
+        <li>Telemetry ingestion and data pipelines for public space-mission data</li>
+        <li>Python, TypeScript/Node.js, Rust, and C/C++ build systems</li>
+        <li>Approval-gated control loops for autonomous and robotic systems</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid two">
+    <div>
+      <h3>Past performance</h3>
+      <p class="note">Public open-source contributions, not contracts. See <a href="#work">Selected public work</a> for links.</p>
+      <ul>
+        <li>CI and build fixes submitted to NASA repositories (api-docs, vira, meza, hermes)</li>
+        <li>GitHub Actions security-hardening PRs submitted to NASA repositories (bplib, ncompare, vira, api-docs, meza)</li>
+        <li>Container CI fix submitted to NationalSecurityAgency/seabee</li>
+        <li>Database concurrency fix submitted to NVIDIA/OpenShell</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Differentiators</h3>
+      <ul>
+        <li><strong>Verifiable by default.</strong> Work is public, so anyone can review the code and history before engaging.</li>
+        <li><strong>Upstream first.</strong> Fixes go to the source project instead of living in private forks.</li>
+        <li><strong>Honest signals.</strong> Tooling is built to catch faked green builds and silent behavior changes.</li>
+        <li><strong>Small and direct.</strong> You work with the engineer who writes the code.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <h2>Contact</h2>
+  <p>Joshua Almeida, founder<br><a href="mailto:Fitzyracing1@gmail.com">Fitzyracing1@gmail.com</a><br><a href="https://github.com/Almeidafly">github.com/Almeidafly</a> · <a href="https://github.com/fitzyracing1">github.com/fitzyracing1</a></p>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <p>Almeidafly does not currently hold security clearances or government contracts. Organization names identify the public repositories contributed to and do not imply endorsement by NASA, NSA, NVIDIA, or any other organization.</p>
+  <p>Copyright (c) 2026 Joshua Almeida</p>
+</footer>
+</body>
+</html>
